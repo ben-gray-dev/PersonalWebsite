@@ -1,0 +1,13 @@
+<div class="navbar" [ngClass]="{'sticky': sticky}">
+    <div id="linkContainer">
+        <span id="filler"></span>
+        <span>
+            <a (click)="scrollToHome()" [ngClass]="{'active': homeSelected}">Home</a>
+            <a (click)="scrollToAbout()" [ngStyle]="{'background-color': aboutSelected ? 'rgb(32,32,32)' : '#454141'}">About</a>
+            <a (click)="scrollToPortfolio()" [ngStyle]="{'background-color': portfolioSelected ? 'rgb(32,32,32)' : '#454141'}">Portfolio</a>
+            <a (click)="scrollToContact()" [ngStyle]="{'background-color': contactSelected ? 'rgb(32,32,32)' : '#454141'}">Contact</a>
+        </span>
+        
+    </div>
+  
+</div>

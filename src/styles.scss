@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+html, body {
+    background-color: #595555;
+    font-family: "Courier New", Courier, monospace;
+    overflow-x: hidden;
+    
+}
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+body { margin: 0;}
+
+.content {
+  margin-top: 3vh;
+}

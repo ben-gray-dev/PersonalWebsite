@@ -1,0 +1,39 @@
+<div id="earthContainer">
+  <div class="earth">
+    <div>
+      <!-- <div class="day"></div> -->
+      <div class="dusk"></div>
+      <div class="night"></div>  
+    </div>
+  </div>
+  <div class="greeting" [ngStyle]="{'left': 'calc(50% - ' + currentOffset + 'vw)'}">
+    <ngx-typed-js [strings]="['Привет! Меня зовуть Бен', 'Hello! My name is Ben', 'Salve! Mi chiamo Ben', 'Hola! Me llamo Ben', '你好! 我叫 Ben']" [shuffle]="false" [typeSpeed]="60"
+    [loop]="true" [cursorChar]="'_'" [backDelay]="1000" (preStringTyped)="centerText($event)">
+        <span class="typing"></span>
+    </ngx-typed-js>
+  </div>
+</div>
+<div class="iconContainer">
+  <div class="personalIcon">
+    <a class="personalIconLink" href="https://github.com/benniferlopez">
+      <i class="fa fa-github fa-4x"></i>
+    </a>
+  </div>  
+  <div class="personalIcon">
+    <a class="personalIconLink" href="https://www.instagram.com/benito_musscoleni/">
+      <i class="fa fa-instagram fa-4x"></i>
+    </a>
+  </div> 
+  <div class="personalIcon">
+    <a class="personalIconLink" href="https://www.linkedin.com/in/ben-gray-78299b151/">
+      <i class="fa fa-linkedin fa-4x"></i>
+    </a>
+  </div> 
+</div>
+<div id="arrowTopContainer">
+  <div  id="arrowContainer" class="iconContainer">
+    <div class="downArrow">
+        <i [@arrowDown]="isUp ? 'topOfPath': 'bottomOfPath'" class="fa fa-chevron-down fa-4x" (click)="scrollToProjectsView()"></i>
+    </div> 
+  </div>
+</div>

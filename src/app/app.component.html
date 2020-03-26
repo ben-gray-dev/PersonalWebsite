@@ -1,0 +1,7 @@
+<app-header #header (scrollToNavBarEmitter)="scrollToNavBar()" id="header"></app-header>
+<app-navbar #navbarComp id="navBar" (scrollToContactEmitter)="scrollToContactsView()"
+                        (scrollToHomeEmitter)="scrollToHomeView()"
+                        (scrollToPortfolioEmitter)="scrollToPortfolioView()"
+                        (scrollToAboutEmitter)="scrollToAboutView()">
+</app-navbar>
+<app-projects-card id="portfolio"></app-projects-card>
