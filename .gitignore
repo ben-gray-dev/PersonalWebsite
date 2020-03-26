@@ -67,3 +67,7 @@ node_modules/
 dist/
 
 package-lock.json
+deploySite.sh
+yarn.lock
+storage.rules
+firebase.json
