@@ -30,10 +30,6 @@ export class AppComponent implements OnInit, AfterViewInit {
          dematerialize()
     ).subscribe((v) => {
       this.scrollToAboutView();
-      this.navbarComp.sticky = true;
-      console.log('here');
-      this.navbarComp.unselectAll();
-      this.navbarComp.aboutSelected = true;
       lastTS = v;
       pauser.next(true);
     });
@@ -62,12 +58,12 @@ export class AppComponent implements OnInit, AfterViewInit {
         }
       } else {
         this.navbarComp.sticky = true;
-        if (currOffset < window.innerHeight*2) {
+        if (currOffset < window.innerHeight*2*.9) {
           if (!this.myLocked) {
             this.navbarComp.unselectAll();
             this.navbarComp.aboutSelected = true;
           }
-        } else if (currOffset < window.innerHeight*3) {
+        } else if (currOffset < window.innerHeight*3*.9) {
           if (!this.myLocked) {
             this.navbarComp.unselectAll();
             this.navbarComp.portfolioSelected = true;
