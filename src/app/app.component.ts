@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
-import { debounceTime, filter, delay, distinctUntilChanged, distinctUntilKeyChanged, delayWhen, switchMap, materialize, dematerialize } from 'rxjs/operators';
+import { switchMap, materialize, dematerialize } from 'rxjs/operators';
 import { NgAnimateScrollService } from 'bens-ng-animate-scroll';
-import { Subscription, BehaviorSubject, Subject, interval, of, empty, NEVER, Observable } from 'rxjs';
+import { BehaviorSubject, Subject, NEVER } from 'rxjs';
 import { HeaderComponent } from './header/header.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
@@ -9,6 +9,7 @@ let scrollWatcher = new Subject<number>();
 let pauser = new BehaviorSubject<boolean>(false);
 let oldScrollLoc: number;
 let lastTS: number = 0;
+let locked = false;
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,7 @@ let lastTS: number = 0;
 })
 export class AppComponent implements OnInit, AfterViewInit {
   title = 'personalSite';
+  myLocked = false;
 
   @ViewChild(HeaderComponent) header: HeaderComponent;
   @ViewChild(NavbarComponent) navbarComp: NavbarComponent;
@@ -27,10 +29,11 @@ export class AppComponent implements OnInit, AfterViewInit {
          switchMap(paused => paused ? NEVER : scrollWatcher.pipe(materialize())),
          dematerialize()
     ).subscribe((v) => {
-      this.scrollToPortfolioView();
+      this.scrollToAboutView();
       this.navbarComp.sticky = true;
+      console.log('here');
       this.navbarComp.unselectAll();
-      this.navbarComp.portfolioSelected = true;
+      this.navbarComp.aboutSelected = true;
       lastTS = v;
       pauser.next(true);
     });
@@ -45,15 +48,14 @@ export class AppComponent implements OnInit, AfterViewInit {
 
     window.onscroll = (ev) => {
       const currOffset = window.pageYOffset;
-      console.log(currOffset);
-      if ( currOffset < 974) {
-       if (!this.navbarComp.homeSelected) {
+      if ( currOffset < window.innerHeight) {
+       if (!this.navbarComp.homeSelected && !this.myLocked) {
           this.navbarComp.unselectAll();
           this.navbarComp.homeSelected = true;
        }
        this.navbarComp.sticky = false;
        if (currOffset > oldScrollLoc) {
-          if (ev.timeStamp - 1000 > lastTS) {
+          if (ev.timeStamp - 1000 > lastTS && !this.myLocked) {
             scrollWatcher.next(ev.timeStamp);
             pauser.next(false);
           }
@@ -61,9 +63,19 @@ export class AppComponent implements OnInit, AfterViewInit {
       } else {
         this.navbarComp.sticky = true;
         if (currOffset < window.innerHeight*2) {
-          if (!this.navbarComp.portfolioSelected) {
+          if (!this.myLocked) {
+            this.navbarComp.unselectAll();
+            this.navbarComp.aboutSelected = true;
+          }
+        } else if (currOffset < window.innerHeight*3) {
+          if (!this.myLocked) {
             this.navbarComp.unselectAll();
             this.navbarComp.portfolioSelected = true;
+          }
+        } else {
+          if (!this.myLocked) {
+            this.navbarComp.unselectAll();
+            this.navbarComp.contactSelected = true;
           }
         }
       }
@@ -76,13 +88,26 @@ export class AppComponent implements OnInit, AfterViewInit {
   
   }
 
+  delay(ms: number) {
+    return new Promise( resolve => setTimeout(resolve, ms) );
+  }
+
+
 
   scrollToNavBar() {
     this.animateScrollService.scrollToElement('navBar');
   }
 
+  async scrollToSection(id: string) {
+    pauser.next(true);
+    this.myLocked = true;
+    this.animateScrollService.scrollToElement(id);
+    await this.delay(750);
+    this.myLocked = false;
+  }
+
   scrollToContactsView() {
-    this.animateScrollService.scrollToElement('contacts');
+    this.scrollToSection('contacts');
   }
 
   scrollToHomeView() {
@@ -90,11 +115,11 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   scrollToPortfolioView() {
-    this.animateScrollService.scrollToElement('navBar');
+    this.scrollToSection('portfolio');
   }
   
   scrollToAboutView() {
-    this.animateScrollService.scrollToElement('about');
+    this.animateScrollService.scrollToElement('navBar');
   }
   
 }

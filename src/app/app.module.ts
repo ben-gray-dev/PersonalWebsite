@@ -14,8 +14,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProjectsCardComponent } from './projects-card/projects-card.component';
 import { StyleDirective } from './style.directive';
 import { NavbarComponent } from './navbar/navbar.component';
-
-
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -23,14 +25,18 @@ import { NavbarComponent } from './navbar/navbar.component';
     HeaderComponent,
     ProjectsCardComponent,
     StyleDirective,
-    NavbarComponent
+    NavbarComponent,
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgxTypedJsModule,
     BrowserAnimationsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    MatCardModule,
+    MatDividerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

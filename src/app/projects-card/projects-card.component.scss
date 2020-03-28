@@ -1,6 +1,18 @@
 .projectContainer {
-    display: flex;
+    display: inline-block;
     height: 100vh;
     width: 100%;
-    
+    margin-top: 6vh;
+    color: white;
+}
+
+#headerContainer {
+    font-size: 8vh;
+    text-align: center;
+    mat-divider {
+        width: 20%;
+        margin: auto;
+        height: 50px;
+        border-top-width: thick;
+    }
 }

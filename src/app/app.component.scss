@@ -2,7 +2,8 @@ app-header {
     height: 100vh;
 }
 
-app-projects-card {
+.section {
+    display: flex;
     position: relative;
     height: 100vh;
     width: 100%;

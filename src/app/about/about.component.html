@@ -1,0 +1,59 @@
+<div class="aboutContainer content">
+    <div id="headerContainer">
+        <span>ABOUT</span>
+        <mat-divider></mat-divider>
+    </div>
+    <div id="detailContainer">
+        <mat-card class="detail faa-parent animated-hover">
+            <i class="fa fa-mobile faa-shake"></i>
+        </mat-card>
+        <mat-card class="detail faa-parent animated-hover">
+            <i class="fa fa-space-shuttle faa-passing"></i>
+        </mat-card>
+        <mat-card class="detail" (mouseover)="spinning = true" (mouseout)="spinning = false">
+            <i class="fa fa-cog fa-spin" [ngClass]="{'fa-spin': spinning}"></i>
+        </mat-card>
+        <mat-card class="detail faa-parent animated-hover">
+            <i class="fa fa-heartbeat faa-pulse"></i>
+        </mat-card>
+    </div>
+    <div id="descriptionsContainer">
+        <div class="description">
+            <div class="title">
+                <span class="header">Mobile</span>
+            </div>
+            <mat-divider class="header-underline"></mat-divider>
+            <p>This is the description of these components and their importance to my development</p>
+        </div>
+        <div class="description">
+            <div class="title">
+                <span class="header">Reactive</span>
+            </div>
+            <mat-divider class="header-underline"></mat-divider>
+            <p>This is the description of these components and their importance to my development</p>
+        </div>
+        <div class="description">
+            <div class="title">
+                <span class="header">Automated</span>
+            </div>
+            <mat-divider class="header-underline"></mat-divider>
+            <p>This is the description of these components and their importance to my development</p>
+        </div>
+        <div class="description">
+            <div class="title">
+                <span class="header">Medical</span>
+            </div>
+            <mat-divider class="header-underline"></mat-divider>
+            <p>This is the description of these components and their importance to my development</p>
+        </div>
+    </div>
+
+    <div id="personalContainer">
+        <div id="imgHolder">
+            <img src="./../../assets/headshot.JPG">
+        </div>
+        <mat-divider [vertical]="true"></mat-divider>
+        <p>My name is Ben <span>Gray</span>. I am a NCSU student studying software engineering with experience in full-stack web development, mobile development, and automation. Additionally, I'm especially interested in the intersection of health and software.</p>
+    </div>
+
+</div>

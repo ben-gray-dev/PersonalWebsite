@@ -30,6 +30,7 @@
     "angular-material-icons": "^0.7.1",
     "bens-ng-animate-scroll": "^8.1.2",
     "font-awesome": "^4.7.0",
+    "font-awesome-animation": "^0.2.1",
     "ngx-typed-js": "^2.0.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
