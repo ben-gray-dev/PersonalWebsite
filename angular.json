@@ -33,7 +33,9 @@
               "./node_modules/font-awesome/css/font-awesome.css",
               "./node_modules/font-awesome-animation/dist/font-awesome-animation.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/particles.js"
+            ]
           },
           "configurations": {
             "production": {

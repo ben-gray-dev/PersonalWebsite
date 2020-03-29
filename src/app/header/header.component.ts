@@ -1,14 +1,12 @@
 import { transition, trigger, state, style, animate } from '@angular/animations';
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit, Output, AfterViewInit } from '@angular/core';
 import { interval, Subscription } from 'rxjs';
 import { EventEmitter } from '@angular/core';
-
 
 const textOffsets = [15, 12, 12, 12, 6];
 let currentOffset = 350;
 
-
-
+declare var particlesJS: any;
 
 @Component({
   selector: 'app-header',
@@ -18,7 +16,7 @@ let currentOffset = 350;
     trigger('arrowDown', [
       state('topOfPath', style({
         marginTop: '0',
-        opacity: 1,
+        opacity: 0.7,
       })),
       state('bottomOfPath', style({
         marginTop: '4vh',
@@ -28,7 +26,7 @@ let currentOffset = 350;
     ]),
   ],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, AfterViewInit {
 
  @Output() scrollToNavBarEmitter = new EventEmitter();
 
@@ -37,10 +35,18 @@ export class HeaderComponent implements OnInit {
   subscription: Subscription;
        
   constructor() { }
+  ngAfterViewInit(): void {
+    particlesJS.load('particles-js', './../../assets/data/particles.json', function() {
+      console.log('callback - particles.js config loaded');
+    })
+  }
   
   ngOnInit(): void {
     const source = interval(1000);
     this.subscription = source.subscribe(() => this.isUp = !this.isUp);
+   
+    
+
 
   }
 

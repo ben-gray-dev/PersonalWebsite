@@ -9,7 +9,6 @@ let scrollWatcher = new Subject<number>();
 let pauser = new BehaviorSubject<boolean>(false);
 let oldScrollLoc: number;
 let lastTS: number = 0;
-let locked = false;
 
 @Component({
   selector: 'app-root',
