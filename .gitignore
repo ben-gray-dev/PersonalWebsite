@@ -71,3 +71,4 @@ deploySite.sh
 yarn.lock
 storage.rules
 firebase.json
+.DS_Store
