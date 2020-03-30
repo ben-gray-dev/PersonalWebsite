@@ -1,0 +1,111 @@
+#headerContainer {
+    font-size: 8vh;
+    text-align: center;
+    mat-divider {
+        width: 20%;
+        margin: auto;
+        height: 50px;
+        border-top-width: thick;
+    }
+}
+
+
+#contactContainer {
+    display: inline-block;
+    height: 94vh;
+    width: 100%;
+    margin-top: 6vh;
+    color: white;
+}
+
+
+mat-divider {
+    border-color: #118292;
+}
+
+
+div#formContainer {
+    margin: auto;
+    width: 70%;
+    display: flex;
+
+    mat-card {
+        display: flex;
+        margin: auto;
+        width: 40vw;
+        height: 40vh;
+        background-color: #454141;
+        // background-color: #118292;
+        border-radius: 2vw;
+
+
+    }
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: auto;
+
+    div {
+        margin: auto;
+    }
+
+    mat-form-field {
+        width: 30vw;
+    }
+
+    button {
+        margin: auto;
+        font-family: "Courier New", Courier, monospace;
+        color: white;
+        font-size: 1vw;
+    }
+}
+
+mat-form-field {
+    color: white;
+    input  {
+        border-color: white;
+    }
+    font-size: 1.5vh;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: white;
+  }
+
+/* Font color */
+mat-label {
+    color: white;
+  }
+
+::ng-deep .mat-focused .mat-form-field-label {
+    /*change color of label*/
+    color: white !important;
+   }
+  
+   ::ng-deep.mat-form-field-underline  {
+    /*change color of underline*/
+    background-color: white !important;
+  } 
+  
+  ::ng-deep.mat-form-field-ripple {
+   /*change color of underline when focused*/
+   background-color: white !important;;
+  }
+
+
+::placeholder {
+    color: white;
+}
+
+textarea {
+    resize: none !important;
+    height: 10vh;
+}
+
+mat-form-field {
+    font-family: 'Courier New', Courier, monospace;
+}

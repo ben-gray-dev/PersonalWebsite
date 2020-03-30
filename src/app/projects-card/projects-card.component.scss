@@ -18,8 +18,16 @@
 }
 
 div#projects {
+    display: flex;
     width: 70%;
+    margin: auto;
     
+}
+
+div.tile {
+    display: flex;
+    width: 20vw;
+    margin: auto;
 }
 
 

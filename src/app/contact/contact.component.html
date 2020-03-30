@@ -1,3 +1,37 @@
 <div class="content" id="contactContainer">
-    <p>Test</p>
+    <div id="headerContainer">
+        <span>CONTACT</span>
+        <mat-divider></mat-divider>
+    </div>
+    <div id="formContainer">
+        <mat-card>
+            <form id="contactForm" [formGroup]="contactFormCtl">
+                <div>
+                    <mat-form-field id="nameinput" class="email-form-option" appearance="outline" >
+                        <mat-label>Name</mat-label>
+                        <input matInput spellcheck="false" formControlName="name" autocomplete="off">
+                    </mat-form-field>
+                    
+                </div>
+                
+                <div>
+                    <mat-form-field id="emailinput" class="email-form-option"  appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input matInput spellcheck="false" formControlName="email" autocomplete="off" >
+                        <mat-placeholder class="placeholder">Email</mat-placeholder>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field id="messageinput" class="email-form-option" appearance="outline">
+                        <mat-label>Message</mat-label>
+                        <textarea matInput spellcheck="false" formControlName="message" autocomplete="off">Message</textarea>
+                        <mat-placeholder class="placeholder">Message</mat-placeholder>
+                    </mat-form-field>
+                </div>
+                <button mat-button>Submit</button>
+            </form>
+        </mat-card>
+    </div>
+ 
+    
 </div>
