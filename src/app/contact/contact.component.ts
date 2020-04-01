@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-contact',
@@ -9,9 +10,9 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class ContactComponent implements OnInit {
 
   contactForm;
-  contactFormCtl;
+  contactFormCtl: FormGroup;
 
-  constructor(
+  constructor(private db: AngularFirestore
   ) { 
 
     this.contactFormCtl = new FormGroup({
@@ -26,6 +27,11 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
 
 
+  }
+
+  onSubmit(formVals: any) {
+   this.db.collection('messages').add(formVals);
+   this.contactFormCtl.reset();
   }
 
 }

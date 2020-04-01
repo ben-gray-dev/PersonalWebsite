@@ -5,7 +5,7 @@
     </div>
     <div id="formContainer">
         <mat-card>
-            <form id="contactForm" [formGroup]="contactFormCtl">
+            <form id="contactForm" [formGroup]="contactFormCtl" (ngSubmit)="onSubmit(contactFormCtl.value)">
                 <div>
                     <mat-form-field id="nameinput" class="email-form-option" appearance="outline" >
                         <mat-label>Name</mat-label>
@@ -28,7 +28,7 @@
                         <mat-placeholder class="placeholder">Message</mat-placeholder>
                     </mat-form-field>
                 </div>
-                <button mat-button>Submit</button>
+                <button mat-button type="submit" [disabled]="contactFormCtl.invalid">Submit</button>
             </form>
         </mat-card>
     </div>
