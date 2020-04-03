@@ -4,11 +4,18 @@
         <mat-divider></mat-divider>
     </div>
 
-    <div id="projects">
-        <div *ngFor="let project of tileData" class="tile">   
-            {{ project.github }}
-        </div>
-        
+    <div *ngFor="let projectChunk of tileData" class="projectRow">
+        <div class="iconContainer">
+            <mat-card *ngFor="let project of projectChunk" class="tile" [ngStyle]="{'background-image': 'url(' + project.imgPath + ')'}"> 
+                <a *ngIf="project.hasOwnProperty('github')" class="projectDetails" href="{{ project.github }}">
+                    <i class="fa fa-github"></i>
+                </a>
+                <a *ngIf="project.hasOwnProperty('website')" class="projectDetails" href="{{ project.website }}">
+                    <i class="fa fa-code"></i>
+                </a>
+
+            </mat-card>
+        </div>        
     </div>
 </div>
 

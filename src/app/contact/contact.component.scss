@@ -114,3 +114,15 @@ textarea {
 mat-form-field {
     font-family: 'Courier New', Courier, monospace;
 }
+#footer {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    background-color: #454141;
+    height: 4vh;
+    width: 100%;
+    span {
+        margin: auto;
+        font-size: 2vh;
+    }
+}

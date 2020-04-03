@@ -8,7 +8,7 @@ export const portfolioData = [
       'website': 'https://diglossia.me',
       'description': 'Diglossia is a text analytics tool for medical professionals to analyze their rhetoric for potentially confusing language, speaking speed, automated script orders, etc.',
       'fullDescription': '',
-      'imgPath': './../../assets/diglossia.jpg',
+      'imgPath': './../../assets/diglossia-logo-pic.svg',
       'tags': [
         'medical',
         'webdev',
@@ -21,7 +21,7 @@ export const portfolioData = [
       'website': 'https://www.serviceraleigh.org/',
       'description': 'Service Raleigh is a service organization which organizes volunteers for a day of service throughout the Raleigh area.',
       'fullDescription': '',
-      'imgPath': './../../assets/sr.jpg',
+      'imgPath': './../../assets/sr-logo.png',
       'tags': [
         'webdev',
         'python'
@@ -32,7 +32,7 @@ export const portfolioData = [
       'github': 'https://github.com/benniferLopez/GradeGetter',
       'description': 'GradeGetter is a CLI python utility which automates analysis of NCSU grade distribution data (WolfTech Gradient) with the user\'s MyPack schedule availability to compute the optimal schedule.',
       'fullDescription': '',
-      'imgPath': './../../assets/gradegetter.jpg',
+      'imgPath': './../../assets/wolftech_redwhite.png',
       'tags': [
         'automation',
         'CLI',
@@ -44,7 +44,7 @@ export const portfolioData = [
       'github': 'https://github.com/benniferLopez/DropShipper',
       'description': '',
       'fullDescription': '',
-      'imgPath': './../../assets/dropshipper.jpg',
+      'imgPath': './../../assets/ebay-logo.png',
       'tags': [
         'automation',
         'selenium',
@@ -56,7 +56,7 @@ export const portfolioData = [
       'github': 'https://github.com/benniferLopez/HQTriviaBot',
       'description': '',
       'fullDescription': '',
-      'imgPath': './../../assets/hqtriviabot.jpg',
+      'imgPath': './../../assets/hqtrivia-logo.jpg',
       'tags': [
         'automation',
         'selenium',

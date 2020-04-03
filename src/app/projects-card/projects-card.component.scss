@@ -17,17 +17,41 @@
     }
 }
 
-div#projects {
+div.projectRow {
     display: flex;
+    flex-direction: row;
     width: 70%;
     margin: auto;
     
 }
 
-div.tile {
+
+.iconContainer {
+    display: flex;
+    margin: auto;
+}
+
+.tile {
+    
     display: flex;
     width: 20vw;
-    margin: auto;
+    height: 35vh;
+    background-color: #118292;
+    opacity: 0.7;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 0;
+    margin: 5px;
+    box-shadow: 0 0 2px 2px #000, 0 0 2px 2px #000;
+
+    a.projectDetails {
+        color: white;
+        opacity: 0.9;
+        margin: 0.2em;
+        font-size: 2vw;
+    }
+
 }
 
 

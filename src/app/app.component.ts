@@ -43,7 +43,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 
     window.onscroll = (ev) => {
       const currOffset = window.pageYOffset;
-      if ( currOffset < window.innerHeight) {
+      if ( currOffset < window.innerHeight - 10) {
        if (!this.navbarComp.homeSelected && !this.myLocked) {
           this.navbarComp.unselectAll();
           this.navbarComp.homeSelected = true;
