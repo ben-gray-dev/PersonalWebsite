@@ -1,19 +1,46 @@
 <div class="projectContainer content">
     <div id="headerContainer">
         <span>PORTFOLIO</span>
-        <mat-divider></mat-divider>
+        <mat-divider id="headerDivider"></mat-divider>
     </div>
 
     <div *ngFor="let projectChunk of tileData" class="projectRow">
         <div class="iconContainer">
-            <mat-card *ngFor="let project of projectChunk" class="tile" [ngStyle]="{'background-image': 'url(' + project.imgPath + ')'}"> 
-                <a *ngIf="project.hasOwnProperty('github')" class="projectDetails" href="{{ project.github }}">
-                    <i class="fa fa-github"></i>
-                </a>
-                <a *ngIf="project.hasOwnProperty('website')" class="projectDetails" href="{{ project.website }}">
-                    <i class="fa fa-code"></i>
-                </a>
-
+            <mat-card *ngFor="let project of projectChunk" class="tile" [ngClass]="{'showingDetails': project.showDetails}" [ngStyle]="{'background-image': 'url(' + project.imgPath + ')'}"> 
+                <div class="cardContent">
+                    <div class="headerBar">
+                        <a *ngIf="project.hasOwnProperty('github')" class="projectDetails" href="{{ project.github }}">
+                            <i class="fa fa-github"></i>
+                        </a>
+                        <a *ngIf="project.hasOwnProperty('website')" class="projectDetails" href="{{ project.website }}">
+                            <i class="fa fa-code"></i>
+                        </a>
+                        <span id="cardSpacer"></span>
+                    </div>
+                   
+                    <div class="overlay" *ngIf="project.showDetails">
+                        <div class="detailWrapper">
+                            <div class="text">
+                                <span class="title">{{ project.displayName }}</span>
+                            </div>
+                            <mat-divider></mat-divider>
+                            <div class="text">
+                                <span>{{ project.description }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="underContent">
+                       
+                        <mat-chip-list>
+                            <mat-chip *ngFor="let tag of project.tags">{{ tag }}</mat-chip>
+                        </mat-chip-list>
+                        <mat-divider class="detailDivider"></mat-divider>
+                        <div class="details">
+                            <span (click)="project.showDetails = !project.showDetails;">{{ project.showDetails ? 'Hide Details' : 'Details' }}</span>
+                        </div>
+                    </div>
+                </div>
+    
             </mat-card>
         </div>        
     </div>

@@ -25,6 +25,7 @@ import { MatInputModule } from '@angular/material/input';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment.prod';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { MatChipsModule } from '@angular/material/chips';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     MatCardModule,
     MatDividerModule,
     MatButtonModule,
+    MatChipsModule,
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,

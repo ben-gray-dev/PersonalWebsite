@@ -14,6 +14,7 @@ export const portfolioData = [
         'webdev',
         'angular'
       ],
+      'showDetails': false,
   },
   {
       'displayName': 'Service Raleigh Web Committee',
@@ -26,6 +27,7 @@ export const portfolioData = [
         'webdev',
         'python'
       ],
+      'showDetails': false,
   },
   {
       'displayName': 'GradeGetter',
@@ -37,7 +39,8 @@ export const portfolioData = [
         'automation',
         'CLI',
         'python'
-      ]
+      ],
+      'showDetails': false,
   },
   {
       'displayName': 'DropShipper',
@@ -49,7 +52,8 @@ export const portfolioData = [
         'automation',
         'selenium',
         'python'
-      ]
+      ],
+      'showDetails': false,
   },
   {
       'displayName': 'HQ Trivia Bot',
@@ -61,7 +65,8 @@ export const portfolioData = [
         'automation',
         'selenium',
         'python'
-      ]
+      ],
+      'showDetails': false,
   }];
 
 @Injectable({
