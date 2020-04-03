@@ -7,7 +7,6 @@ export const portfolioData = [
       'github': 'https://github.com/benniferLopez/Diglossia',
       'website': 'https://diglossia.me',
       'description': 'Diglossia is a text analytics tool for medical professionals to analyze their rhetoric for potentially confusing language, speaking speed, automated script orders, etc.',
-      'fullDescription': '',
       'imgPath': './../../assets/diglossia-logo-pic.svg',
       'tags': [
         'medical',
@@ -21,11 +20,11 @@ export const portfolioData = [
       'github': 'https://github.com/ServiceRaleigh/',
       'website': 'https://www.serviceraleigh.org/',
       'description': 'Service Raleigh is a service organization which organizes volunteers for a day of service throughout the Raleigh area.',
-      'fullDescription': '',
-      'imgPath': './../../assets/sr-logo.png',
+      'imgPath': './../../assets/sr-logo.png',  
       'tags': [
         'webdev',
-        'python'
+        'python',
+        'django'
       ],
       'showDetails': false,
   },
@@ -33,7 +32,6 @@ export const portfolioData = [
       'displayName': 'GradeGetter',
       'github': 'https://github.com/benniferLopez/GradeGetter',
       'description': 'GradeGetter is a CLI python utility which automates analysis of NCSU grade distribution data (WolfTech Gradient) with the user\'s MyPack schedule availability to compute the optimal schedule.',
-      'fullDescription': '',
       'imgPath': './../../assets/wolftech_redwhite.png',
       'tags': [
         'automation',
@@ -45,8 +43,7 @@ export const portfolioData = [
   {
       'displayName': 'DropShipper',
       'github': 'https://github.com/benniferLopez/DropShipper',
-      'description': '',
-      'fullDescription': '',
+      'description': 'DropShipper is a bot which automates proxied scraping of AliExpress and listing of items on Ebay for purchase in the American markets',
       'imgPath': './../../assets/ebay-logo.png',
       'tags': [
         'automation',
@@ -58,8 +55,7 @@ export const portfolioData = [
   {
       'displayName': 'HQ Trivia Bot',
       'github': 'https://github.com/benniferLopez/HQTriviaBot',
-      'description': '',
-      'fullDescription': '',
+      'description': 'The HQ Trivia Bot assists a player of the game HQ Trivia by polling Google\'s search API and Wikipedia\'s API to form an educated guess',
       'imgPath': './../../assets/hqtrivia-logo.jpg',
       'tags': [
         'automation',
