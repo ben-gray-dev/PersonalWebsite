@@ -85,7 +85,7 @@ mat-label {
     color: white;
   }
 
-::ng-deep .mat-focused .mat-form-field-label .mat-form-field-invalid {
+::ng-deep .mat-form-field-label .mat-form-field-invalid {
     /*change color of label*/
     color: white !important;
    }
@@ -99,6 +99,10 @@ mat-label {
    /*change color of underline when focused*/
    background-color: white !important;;
   }
+
+  ::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    color: #118292!important;
+}
 
 
 
