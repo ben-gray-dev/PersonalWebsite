@@ -51,6 +51,10 @@ div.cardContent {
     margin: 5px;
     box-shadow: 0 0 2px 2px #000;
 
+
+    a:hover {
+        color: #454141 !important;
+    }
     #cardSpacer {
         flex: 1 1 auto;
         height: 2vw;
@@ -168,6 +172,10 @@ div.cardContent {
     mat-divider.detailDivider {
         border-color: white;
     }
+
+    a:hover {
+        color: #118292 !important;
+    }
 }
 
 
@@ -178,5 +186,7 @@ div.cardContent {
 mat-divider#headerDivider {
     border-color: #118292;
 }
+
+
 
 
