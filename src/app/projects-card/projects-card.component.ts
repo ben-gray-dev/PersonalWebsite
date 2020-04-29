@@ -28,6 +28,16 @@ export class ProjectsCardComponent implements OnInit {
     }
 
     return tempArray;
-}
+  }
+
+
+  styleProject(project: Object) {
+    const styles = {}
+    if (project.hasOwnProperty('scale') && project['scale'] === true) {
+      styles['background-size'] = '10vw auto'
+    }
+    styles['background-image']= `url(${project['imgPath']})`;
+    return styles;
+  }
 
 }

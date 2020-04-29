@@ -6,7 +6,7 @@
 
     <div *ngFor="let projectChunk of tileData" class="projectRow">
         <div class="iconContainer">
-            <mat-card *ngFor="let project of projectChunk" class="tile" [ngClass]="{'showingDetails': project.showDetails}" [ngStyle]="{'background-image': 'url(' + project.imgPath + ')'}"> 
+            <mat-card *ngFor="let project of projectChunk" class="tile" [ngClass]="{'showingDetails': project.showDetails}" [ngStyle]="styleProject(project)"> 
                 <div class="cardContent">
                     <div class="headerBar">
                         <a *ngIf="project.hasOwnProperty('github')" class="projectDetails" href="{{ project.github }}">
