@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 export const portfolioData = [
   {
       'displayName': 'Diglossia',
-      'github': 'https://github.com/benniferLopez/Diglossia',
+      'github': 'https://github.com/ben-gray-dev/Diglossia',
       'website': 'https://diglossia.me',
       'description': 'Diglossia is a text analytics tool for medical professionals to analyze their rhetoric for potentially confusing language, speaking speed, automated script orders, etc.',
       'imgPath': './../../assets/diglossia-logo-pic.svg',
@@ -30,7 +30,7 @@ export const portfolioData = [
   },
   {
       'displayName': 'GradeGetter',
-      'github': 'https://github.com/benniferLopez/GradeGetter',
+      'github': 'https://github.com/ben-gray-dev/GradeGetter',
       'description': 'GradeGetter is a CLI python utility which automates analysis of NCSU grade distribution data (WolfTech Gradient) with the user\'s MyPack schedule availability to compute the optimal schedule.',
       'imgPath': './../../assets/wolftech_redwhite.png',
       'tags': [
@@ -42,7 +42,7 @@ export const portfolioData = [
   },
   {
       'displayName': 'DropShipper',
-      'github': 'https://github.com/benniferLopez/DropShipper',
+      'github': 'https://github.com/ben-gray-dev/DropShipper',
       'description': 'DropShipper is a bot which automates proxied scraping of AliExpress and listing of items on Ebay for purchase in the American markets',
       'imgPath': './../../assets/ebay-logo.png',
       'tags': [
@@ -54,7 +54,7 @@ export const portfolioData = [
   },
   {
       'displayName': 'HQ Trivia Bot',
-      'github': 'https://github.com/benniferLopez/HQTriviaBot',
+      'github': 'https://github.com/ben-gray-dev/HQTriviaBot',
       'description': 'The HQ Trivia Bot assists a player of the game HQ Trivia by polling Google\'s search API and Wikipedia\'s API to form an educated guess',
       'imgPath': './../../assets/hqtrivia-logo.jpg',
       'tags': [
@@ -66,7 +66,7 @@ export const portfolioData = [
   },
   {
     'displayName': 'Thermal Security Camera',
-    'github': 'https://github.com/benniferLopez/thermal-security-camera',
+    'github': 'https://github.com/ben-gray-dev/thermal-security-camera',
     'description': 'A real-time thermal security camera using a raspberry pi with Adafruit AMG8833 thermal sensor, Flask with server sent events, and machine learning to classify human thermal traces.',
     'imgPath': './../../assets/thermalCamDemo.gif',
     'tags': [
